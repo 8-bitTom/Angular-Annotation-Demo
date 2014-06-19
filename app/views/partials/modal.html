@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h3 class="modal-title">Sample Groups<button type="button" class="close pull-right" aria-hidden="true" ng-click="close()">&times;</button></h3>
+
+</div>
+<div class="modal-body">
+    <div ng-repeat="item in group" ng-if="$index > 0" class="row">
+        <div class="col-xs-3">
+            <strong>{{item}}:</strong>
+        </div>
+        <div class="col-xs-9">
+            <span ng-repeat="sample in samples" ng-if="sample.group === $parent.$index">
+                <span>{{sample.accession}}</span>
+                <span ng-if="$first || $middle">, </span>
+            </span>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="row">
+    <div class="panel panel-default">
+
+        <div class="panel-heading col-xs-12">
+            <div ng-click="states.expander = !states.expander" class="clickable col-xs-4">
+                <span class="glyphicon" ng-class=" {'glyphicon-chevron-down' : states.expander, 'glyphicon-chevron-up' : !states.expander}"></span> <strong class="text-bold">Samples</strong>
+            </div>
+
+            <div class="col-xs-3 dropdown">
+                <a class="dropdown-toggle">
+                    <span class="caret"></span><span class="text-info"> Define groups</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="#" class="noHover">
+                            <div class="text-muted">
+                                Enter a group name:
+                                <span class="text-right text-info" ng-click="openWindow()">List</span>
+                            </div>
+                            <input type="text" ng-keyup="checkSubmit($event)" ng-model="groupName">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" ng-click="addToGroup(0)">
+                        <span class="glyphicon glyphicon-remove text-danger"></span>
+                            Cancel Selection
+                        </a>
+                    </li>
+                    <li ng-repeat-start="item in group" ng-if="$index !== 0" class="divider" ng-if="group.length > 1"></li>
+                    <li ng-repeat-end  ng-if="$index !== 0">
+                        <a href="#" ng-click="addToGroup($index)">
+                            <div class="{{'preview group' + $index}}"></div>
+                            <span>{{item}}</span> <span ng-if="(samples | filter: {group : $index}).length > 0">({{(samples | filter: {group : $index}).length}} samples)</span>
+                            <span class="glyphicon glyphicon-remove-sign pull-right" ng-click="destroyGroup($index)"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-3 col-xs-offset-2">
+                selected <strong>{{states.selected.length}}</strong> out of <strong>{{samples.length}}</strong> samples
+            </div>
+        </div>
+
+        <div class="panel-body" ng-class="{'hideBody' : !states.expander}">
+            <div ng-if="states.expander" class="table-responsive shrink">
+                <div class="pull-right columnDropdown">
+                    <div class="btn-group" dropdown is-open="states.dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle">Columns <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ng-repeat="(item, info) in states.columns">
+                                <a href="#" class="checkbox" ng-click="states.columns[item].view = !states.columns[item].view">
+                                    <!--<div class="checkbox">-->
+                                        <label>
+                                            <input type="checkbox" ng-model="info.view"> {{info.title}}
+                                        </label>
+                                    <!--</div>-->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th class="clickable" ng-click="sort('group')">
+                            Group<span class="glyphicon pull-right" ng-class="sortClass('group')"></span>
+                        </th>
+                        <th class="clickable" ng-click="sort('accession')" ng-if="states.columns.accession.view">
+                            Accession<span class="glyphicon pull-right" ng-class="sortClass('accession')"></span>
+                        </th>
+                        <th class="clickable" ng-click="sort('title')" ng-if="states.columns.title.view">
+                            Title<span class="glyphicon pull-right" ng-class="sortClass('title')"></span>
+                        </th>
+                        <th class="clickable" ng-click="sort('source')" ng-if="states.columns.source.view">
+                            Source name<span class="glyphicon pull-right" ng-class="sortClass('source')"></span>
+                        </th>
+                        <th class="clickable" ng-click="sort('info')" ng-if="states.columns.info.view">
+                            Charachteristics<span class="glyphicon pull-right" ng-class="sortClass('info')"></span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="sample in samples | orderBy: states.filter: states.filterRev" class="clickable {{'group' + sample.group}}" ng-click="select(sample._id)" ng-class="{ 'selected' : states.selected.indexOf(sample._id) > -1}">
+                        <td class="text-center">{{group[sample.group] || "-"}}</td>
+                        <td ng-if="states.columns.accession.view">{{sample.accession}}</td>
+                        <td ng-if="states.columns.title.view">{{sample.title}}</td>
+                        <td ng-if="states.columns.source.view">{{sample.source}}</td>
+                        <td ng-if="states.columns.info.view">{{sample.info}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="footer">
+        <p>Tom Marra, Qiagen Silicon Valley &copy;2014</p>
+    </div>
+</div>
+
