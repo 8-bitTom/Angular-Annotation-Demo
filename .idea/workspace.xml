@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="7688aeea-c6d5-4066-96f3-6d0ecc1ef1f5" name="Default" comment="" />
+    <list default="true" readonly="true" id="7688aeea-c6d5-4066-96f3-6d0ecc1ef1f5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="annotationDemo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/sample.js" changelist="7688aeea-c6d5-4066-96f3-6d0ecc1ef1f5" time="1403115073033" ignored="false" />
@@ -218,6 +221,7 @@
     <file path="/modal.html" changelist="7688aeea-c6d5-4066-96f3-6d0ecc1ef1f5" time="1403200236821" ignored="false" />
     <file path="/index.html" changelist="7688aeea-c6d5-4066-96f3-6d0ecc1ef1f5" time="1403136969286" ignored="false" />
     <file path="/modalinstance.js" changelist="7688aeea-c6d5-4066-96f3-6d0ecc1ef1f5" time="1403137231726" ignored="false" />
+    <file path="/Dummy.txt" changelist="7688aeea-c6d5-4066-96f3-6d0ecc1ef1f5" time="1403200522764" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +333,7 @@
       <file leaf-file-name="modal.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/partials/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="29" selection-start="335" selection-end="335" vertical-scroll-proportion="0.11904762">
+            <state line="19" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.32312927">
               <folding />
             </state>
           </provider>
@@ -350,6 +354,14 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -376,7 +388,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1054" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -422,20 +434,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotationDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotationDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -443,9 +441,13 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
@@ -734,7 +736,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="335" selection-end="335" vertical-scroll-proportion="0.11904762">
+        <state line="19" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.32312927">
           <folding />
         </state>
       </provider>
