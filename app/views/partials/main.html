@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li ng-repeat-start="item in group" ng-if="$index !== 0" class="divider" ng-if="group.length > 1"></li>
-                    <li ng-repeat-end  ng-if="$index !== 0">
+                    <li ng-repeat-end  ng-if="$index !== 0" class="dn-fade-left">
                         <a href="#" ng-click="addToGroup($index)">
                             <div class="{{'preview group' + $index}}"></div>
                             <span>{{item}}</span> <span ng-if="(samples | filter: {group : $index}).length > 0">({{(samples | filter: {group : $index}).length}} samples)</span>
