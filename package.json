@@ -68,7 +68,7 @@
     "node": "0.10.x"
   },
   "scripts": {
-	"start": "grunt serve"
+	"start": "grunt build"
   },
   "main": "server.js"
 }
