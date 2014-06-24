@@ -68,6 +68,7 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "grunt test"
-  }
+	"start": "grunt serve"
+  },
+  "main": "server.js"
 }
