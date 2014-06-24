@@ -65,10 +65,9 @@
     "open": "~0.0.4"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": ">=0.10.0"
   },
   "scripts": {
-	"start": "grunt build"
-  },
-  "main": "server.js"
+    "test": "grunt test"
+  }
 }
